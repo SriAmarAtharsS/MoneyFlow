@@ -36,8 +36,8 @@
       scrollbar-width: none;
     }
 
-    /* Claymorphism Design System Styles */
-    .clay-card {
+    /* Claymorphism Design System Styles - Dark Mode */
+    .theme-dark .clay-card {
       background: #1e293b;
       border-radius: 24px;
       box-shadow: 
@@ -47,18 +47,42 @@
         inset -2px -2px 4px rgba(0, 0, 0, 0.4);
     }
 
-    .clay-card-emerald {
+    /* Claymorphism Design System Styles - Light Mode */
+    .theme-light .clay-card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 
+        8px 8px 20px rgba(148, 163, 184, 0.35),
+        -6px -6px 16px rgba(255, 255, 255, 0.9),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.8),
+        inset -2px -2px 4px rgba(203, 213, 225, 0.4);
+    }
+
+    .theme-dark .clay-card-emerald {
       background: linear-gradient(145deg, #064e3b, #022c22);
       border-radius: 28px;
       box-shadow: 
-        10px 10px 20px rgba(0, 0, 0, 0.5),
+        10px 10px 20px rgba(0, 0, 0, 0.3),
         -6px -6px 14px rgba(16, 185, 129, 0.15),
         inset 3px 3px 6px rgba(52, 211, 153, 0.25),
         inset -3px -3px 6px rgba(0, 0, 0, 0.5);
     }
 
+    .theme-light .clay-card-emerald {
+      background: linear-gradient(145deg, #dcfce7, #bbf7d0);
+      border-radius: 28px;
+      box-shadow: 
+        8px 8px 20px rgba(16, 185, 129, 0.25),
+        -6px -6px 16px rgba(255, 255, 255, 0.9),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.8),
+        inset -2px -2px 4px rgba(134, 239, 172, 0.5);
+    }
+
     .clay-pill {
       border-radius: 9999px;
+    }
+
+    .theme-dark .clay-pill {
       box-shadow: 
         4px 4px 8px rgba(0, 0, 0, 0.35),
         -3px -3px 6px rgba(255, 255, 255, 0.05),
@@ -66,29 +90,58 @@
         inset -1.5px -1.5px 3px rgba(0, 0, 0, 0.3);
     }
 
+    .theme-light .clay-pill {
+      box-shadow: 
+        4px 4px 8px rgba(148, 163, 184, 0.25),
+        -3px -3px 6px rgba(255, 255, 255, 0.9),
+        inset 1.5px 1.5px 3px rgba(255, 255, 255, 0.8),
+        inset -1.5px -1.5px 3px rgba(203, 213, 225, 0.3);
+    }
+
     .clay-btn {
-      background: #1e293b;
       border-radius: 16px;
+      transition: all 0.15s ease-in-out;
+    }
+
+    .theme-dark .clay-btn {
+      background: #1e293b;
       box-shadow: 
         5px 5px 10px rgba(0, 0, 0, 0.4),
         -4px -4px 8px rgba(255, 255, 255, 0.05),
         inset 1.5px 1.5px 3px rgba(255, 255, 255, 0.1),
         inset -1.5px -1.5px 3px rgba(0, 0, 0, 0.3);
-      transition: all 0.15s ease-in-out;
+    }
+
+    .theme-light .clay-btn {
+      background: #f1f5f9;
+      box-shadow: 
+        5px 5px 10px rgba(148, 163, 184, 0.3),
+        -4px -4px 8px rgba(255, 255, 255, 0.9),
+        inset 1.5px 1.5px 3px rgba(255, 255, 255, 0.8),
+        inset -1.5px -1.5px 3px rgba(203, 213, 225, 0.4);
     }
 
     .clay-btn:active, .clay-btn-active {
+      transform: translateY(1px);
+    }
+
+    .theme-dark .clay-btn:active, .theme-dark .clay-btn-active {
       box-shadow: 
         inset 4px 4px 8px rgba(0, 0, 0, 0.6),
         inset -3px -3px 6px rgba(255, 255, 255, 0.05);
-      transform: translateY(1px);
+    }
+
+    .theme-light .clay-btn:active, .theme-light .clay-btn-active {
+      box-shadow: 
+        inset 4px 4px 8px rgba(203, 213, 225, 0.7),
+        inset -3px -3px 6px rgba(255, 255, 255, 0.8);
     }
 
     .clay-btn-primary {
       background: linear-gradient(135deg, #10b981, #059669);
       color: #022c22;
       box-shadow: 
-        6px 6px 12px rgba(0, 0, 0, 0.4),
+        6px 6px 12px rgba(0, 0, 0, 0.25),
         -4px -4px 8px rgba(52, 211, 153, 0.2),
         inset 2px 2px 4px rgba(255, 255, 255, 0.3),
         inset -2px -2px 4px rgba(0, 0, 0, 0.3);
@@ -100,14 +153,17 @@
         inset -2px -2px 4px rgba(255, 255, 255, 0.2);
     }
 
-    .clay-header {
+    .theme-dark .clay-header, .theme-dark .clay-nav {
       background: #0f172a;
       box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.5);
     }
 
+    .theme-light .clay-header, .theme-light .clay-nav {
+      background: #ffffff;
+      box-shadow: 0 4px 12px -2px rgba(148, 163, 184, 0.25);
+    }
+
     .clay-nav {
-      background: #0f172a;
-      box-shadow: 0 -8px 16px -4px rgba(0, 0, 0, 0.5);
       padding-bottom: env(safe-area-inset-bottom, 12px);
     }
 
@@ -125,7 +181,7 @@
     }
   </style>
 </head>
-<body class="h-full antialiased bg-slate-950 text-slate-100 overflow-hidden">
+<body class="h-full antialiased overflow-hidden">
   <div id="root" class="h-full w-full"></div>
 
   <script type="text/babel">
@@ -180,7 +236,9 @@
       PiggyBank: (props) => <Icon {...props} path={<><path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-3.5c1-.5 2-1 2.5-2.5 1-.5 2.5-2 2.5-4 0-1.5-1-2.5-2.5-3-.2-.5-1-2-2.5-2z"/><path d="M16 11h.01"/></>} />,
       Shield: (props) => <Icon {...props} path={<><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></>} />,
       GraduationCap: (props) => <Icon {...props} path={<><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></>} />,
-      Home: (props) => <Icon {...props} path={<><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></>} />
+      Home: (props) => <Icon {...props} path={<><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></>} />,
+      Sun: (props) => <Icon {...props} path={<><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></>} />,
+      Moon: (props) => <Icon {...props} path={<><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></>} />
     };
 
     // --- INR Currency Formatter ---
@@ -323,6 +381,7 @@
 
     function App() {
       const [activeTab, setActiveTab] = useState('home');
+      const [theme, setTheme] = useState(() => localStorage.getItem('pocket_inr_theme') || 'dark');
       const [transactions, setTransactions] = useState([]);
       const [monthlyBudget, setMonthlyBudget] = useState(() => Number(localStorage.getItem('pocket_inr_budget')) || 60000);
 
@@ -369,6 +428,14 @@
       const categoryChartInstance = useRef(null);
       const trendChartInstance = useRef(null);
       const paymentChartInstance = useRef(null);
+
+      useEffect(() => {
+        localStorage.setItem('pocket_inr_theme', theme);
+      }, [theme]);
+
+      const toggleTheme = () => {
+        setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+      };
 
       useEffect(() => {
         let isMounted = true;
@@ -460,14 +527,15 @@
       const remainingBudget = Math.max(0, monthlyBudget - totalExpense);
       const budgetSpentPercent = Math.min(100, Math.round((totalExpense / (monthlyBudget || 1)) * 100));
 
-      const highValueTransactions = useMemo(() => {
+      // Show recent transactions strictly in reverse chronological order (newest first)
+      const recentTransactions = useMemo(() => {
         return [...transactions]
           .filter(t => {
             if (topFeedSort === 'expense') return t.type === 'expense';
             if (topFeedSort === 'income') return t.type === 'income';
             return true;
           })
-          .sort((a, b) => Number(b.amount) - Number(a.amount));
+          .sort((a, b) => new Date(b.date) - new Date(a.date));
       }, [transactions, topFeedSort]);
 
       const analyticsFilteredTransactions = useMemo(() => {
@@ -682,6 +750,8 @@
         if (activeTab !== 'analytics' || typeof window.Chart === 'undefined') return;
 
         const targetCategories = analyticsType === 'income' ? INCOME_CATEGORIES : EXPENSE_CATEGORIES;
+        const textColor = theme === 'dark' ? '#94a3b8' : '#475569';
+        const gridColor = theme === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.06)';
 
         // Doughnut Chart
         if (categoryChartRef.current) {
@@ -707,7 +777,7 @@
               responsive: true,
               maintainAspectRatio: false,
               plugins: {
-                legend: { position: 'bottom', labels: { color: '#94a3b8', font: { size: 10 } } }
+                legend: { position: 'bottom', labels: { color: textColor, font: { size: 10 } } }
               },
               cutout: '68%'
             }
@@ -741,8 +811,8 @@
               maintainAspectRatio: false,
               plugins: { legend: { display: false } },
               scales: {
-                x: { ticks: { color: '#64748b', font: { size: 10 } }, grid: { display: false } },
-                y: { ticks: { color: '#64748b', font: { size: 10 } }, grid: { color: 'rgba(255, 255, 255, 0.05)' } }
+                x: { ticks: { color: textColor, font: { size: 10 } }, grid: { display: false } },
+                y: { ticks: { color: textColor, font: { size: 10 } }, grid: { color: gridColor } }
               }
             }
           });
@@ -778,7 +848,7 @@
             options: {
               responsive: true,
               maintainAspectRatio: false,
-              plugins: { legend: { position: 'right', labels: { color: '#94a3b8', font: { size: 10 } } } }
+              plugins: { legend: { position: 'right', labels: { color: textColor, font: { size: 10 } } } }
             }
           });
         }
@@ -788,10 +858,14 @@
           if (trendChartInstance.current) trendChartInstance.current.destroy();
           if (paymentChartInstance.current) paymentChartInstance.current.destroy();
         };
-      }, [analyticsFilteredTransactions, activeTab, analyticsTimeframe, analyticsType]);
+      }, [analyticsFilteredTransactions, activeTab, analyticsTimeframe, analyticsType, theme]);
+
+      const isDark = theme === 'dark';
 
       return (
-        <div className="h-full w-full max-w-md mx-auto bg-slate-950 flex flex-col relative overflow-hidden border-x border-slate-800/80">
+        <div className={`theme-${theme} h-full w-full max-w-md mx-auto flex flex-col relative overflow-hidden border-x ${
+          isDark ? 'bg-slate-950 text-slate-100 border-slate-800/80' : 'bg-slate-50 text-slate-800 border-slate-200'
+        }`}>
           
           <header className="clay-header sticky top-0 z-30 px-5 py-4 flex items-center justify-between shrink-0">
             <div className="inline-flex items-center gap-2.5">
@@ -799,23 +873,37 @@
                 <Icons.Rupee className="w-5 h-5 stroke-[2.5]" />
               </div>
               <div>
-                <h1 className="text-base font-bold text-white leading-none">PocketTrack</h1>
+                <h1 className={`text-base font-bold leading-none ${isDark ? 'text-white' : 'text-slate-900'}`}>PocketTrack</h1>
                 <div className="inline-flex items-center gap-1.5 mt-0.5">
                   <span className={`w-2 h-2 rounded-full ${fbStatus.connected ? 'bg-emerald-400 animate-pulse' : 'bg-amber-400'}`}></span>
-                  <span className="text-[11px] font-medium text-slate-400">
+                  <span className={`text-[11px] font-medium ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
                     {fbStatus.connected ? 'Firestore Live' : 'Local Storage'}
                   </span>
                 </div>
               </div>
             </div>
 
-            <button 
-              onClick={handleExportCSV}
-              className="p-2.5 clay-btn text-slate-300 active:scale-95 transition-all inline-flex items-center justify-center"
-              title="Export CSV Report"
-            >
-              <Icons.Download className="w-4 h-4" />
-            </button>
+            <div className="flex items-center gap-2">
+              <button 
+                onClick={toggleTheme}
+                className={`p-2.5 clay-btn active:scale-95 transition-all inline-flex items-center justify-center ${
+                  isDark ? 'text-amber-400' : 'text-slate-700'
+                }`}
+                title={`Switch to ${isDark ? 'Light' : 'Dark'} Mode`}
+              >
+                {isDark ? <Icons.Sun className="w-4 h-4" /> : <Icons.Moon className="w-4 h-4" />}
+              </button>
+
+              <button 
+                onClick={handleExportCSV}
+                className={`p-2.5 clay-btn active:scale-95 transition-all inline-flex items-center justify-center ${
+                  isDark ? 'text-slate-300' : 'text-slate-700'
+                }`}
+                title="Export CSV Report"
+              >
+                <Icons.Download className="w-4 h-4" />
+              </button>
+            </div>
           </header>
 
           <main className="flex-1 overflow-y-auto no-scrollbar px-4 py-5 space-y-5 pb-28">
@@ -827,43 +915,45 @@
                 <div className="clay-card-emerald p-5 shadow-xl relative overflow-hidden">
                   <div className="flex justify-between items-start">
                     <div>
-                      <p className="text-xs font-semibold text-emerald-200 uppercase tracking-wider">Net Balance</p>
-                      <h2 className="text-3xl font-extrabold text-white mt-1 tracking-tight">
+                      <p className={`text-xs font-semibold uppercase tracking-wider ${isDark ? 'text-emerald-200' : 'text-emerald-800'}`}>Net Balance</p>
+                      <h2 className={`text-3xl font-extrabold mt-1 tracking-tight ${isDark ? 'text-white' : 'text-emerald-950'}`}>
                         {formatINR(netBalance)}
                       </h2>
                     </div>
-                    <div className="px-3 py-1 clay-pill bg-emerald-950/60 text-emerald-300 text-xs font-bold inline-flex items-center gap-1">
+                    <div className={`px-3 py-1 clay-pill text-xs font-bold inline-flex items-center gap-1 ${
+                      isDark ? 'bg-emerald-950/60 text-emerald-300' : 'bg-emerald-200/80 text-emerald-900 border border-emerald-300'
+                    }`}>
                       <Icons.TrendingUp className="w-3.5 h-3.5" />
                       Active
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3 mt-5 pt-4 border-t border-emerald-800/60">
-                    <div className="clay-card p-3 bg-slate-900/80">
-                      <div className="inline-flex items-center gap-1.5 text-xs text-slate-400 mb-0.5">
-                        <Icons.ArrowUpRight className="w-3.5 h-3.5 text-emerald-400" />
+                  <div className={`grid grid-cols-2 gap-3 mt-5 pt-4 border-t ${isDark ? 'border-emerald-800/60' : 'border-emerald-300/80'}`}>
+                    <div className={`clay-card p-3 ${isDark ? 'bg-slate-900/80' : 'bg-white/90 border border-emerald-200'}`}>
+                      <div className={`inline-flex items-center gap-1.5 text-xs mb-0.5 ${isDark ? 'text-emerald-200' : 'text-emerald-800 font-semibold'}`}>
+                        <Icons.ArrowUpRight className="w-3.5 h-3.5 text-emerald-500" />
                         Income
                       </div>
-                      <p className="text-sm font-bold text-emerald-400">{formatINR(totalIncome)}</p>
+                      <p className={`text-sm font-bold ${isDark ? 'text-emerald-300' : 'text-emerald-700'}`}>{formatINR(totalIncome)}</p>
                     </div>
 
-                    <div className="clay-card p-3 bg-slate-900/80">
-                      <div className="inline-flex items-center gap-1.5 text-xs text-slate-400 mb-0.5">
-                        <Icons.ArrowDownRight className="w-3.5 h-3.5 text-rose-400" />
+                    <div className={`clay-card p-3 ${isDark ? 'bg-slate-900/80' : 'bg-white/90 border border-rose-200'}`}>
+                      <div className={`inline-flex items-center gap-1.5 text-xs mb-0.5 ${isDark ? 'text-rose-200' : 'text-rose-800 font-semibold'}`}>
+                        <Icons.ArrowDownRight className="w-3.5 h-3.5 text-rose-500" />
                         Expenses
                       </div>
-                      <p className="text-sm font-bold text-rose-400">{formatINR(totalExpense)}</p>
+                      <p className={`text-sm font-bold ${isDark ? 'text-rose-300' : 'text-rose-700'}`}>{formatINR(totalExpense)}</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="clay-card p-5 space-y-3">
                   <div className="flex justify-between items-center text-xs">
-                    <span className="font-semibold text-slate-300">Monthly Expense Budget</span>
-                    <span className="text-slate-400">{formatINR(totalExpense)} / {formatINR(monthlyBudget)}</span>
+                    <span className={`font-semibold ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>Monthly Expense Budget</span>
+                    <span className={isDark ? 'text-slate-400' : 'text-slate-500'}>{formatINR(totalExpense)} / {formatINR(monthlyBudget)}</span>
                   </div>
 
-                  <div className="w-full bg-slate-950 h-3 clay-pill overflow-hidden p-0.5">
+                  <div className={`w-full ${isDark ? 'bg-slate-950' : 'bg-slate-200'} h-3 clay-pill overflow-hidden p-0.5`}>
                     <div 
                       className={`h-full rounded-full transition-all duration-500 ${
                         budgetSpentPercent > 90 ? 'bg-rose-500' : budgetSpentPercent > 75 ? 'bg-amber-500' : 'bg-emerald-400'
@@ -872,19 +962,19 @@
                     />
                   </div>
 
-                  <div className="flex justify-between items-center text-[11px] text-slate-400 pt-1">
+                  <div className={`flex justify-between items-center text-[11px] ${isDark ? 'text-slate-400' : 'text-slate-500'} pt-1`}>
                     <span>{budgetSpentPercent}% used</span>
-                    <span className="font-semibold text-emerald-400">{formatINR(remainingBudget)} left</span>
+                    <span className="font-semibold text-emerald-500">{formatINR(remainingBudget)} left</span>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <div className="flex justify-between items-center px-1">
                     <div>
-                      <h3 className="text-xs font-bold text-slate-300 uppercase tracking-wider">Top Value Transactions</h3>
-                      <p className="text-[10px] text-slate-400">Sorted by highest amount</p>
+                      <h3 className={`text-xs font-bold uppercase tracking-wider ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>Recent Transactions</h3>
+                      <p className={`text-[10px] ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Most recent first</p>
                     </div>
-                    <button onClick={() => setActiveTab('transactions')} className="text-xs text-emerald-400 font-semibold hover:underline">
+                    <button onClick={() => setActiveTab('transactions')} className="text-xs text-emerald-500 font-semibold hover:underline">
                       View All
                     </button>
                   </div>
@@ -892,25 +982,25 @@
                   <div className="clay-card p-1 grid grid-cols-3 gap-1 text-[11px] font-semibold text-slate-400">
                     <button 
                       onClick={() => setTopFeedSort('all')}
-                      className={`py-1.5 rounded-xl transition-all ${topFeedSort === 'all' ? 'clay-btn-active text-emerald-400 bg-slate-800' : ''}`}
+                      className={`py-1.5 rounded-xl transition-all ${topFeedSort === 'all' ? `clay-btn-active text-emerald-500 ${isDark ? 'bg-slate-800' : 'bg-slate-200'}` : ''}`}
                     >
                       All
                     </button>
                     <button 
                       onClick={() => setTopFeedSort('expense')}
-                      className={`py-1.5 rounded-xl transition-all ${topFeedSort === 'expense' ? 'clay-btn-active text-rose-400 bg-slate-800' : ''}`}
+                      className={`py-1.5 rounded-xl transition-all ${topFeedSort === 'expense' ? `clay-btn-active text-rose-500 ${isDark ? 'bg-slate-800' : 'bg-slate-200'}` : ''}`}
                     >
                       Expenses
                     </button>
                     <button 
                       onClick={() => setTopFeedSort('income')}
-                      className={`py-1.5 rounded-xl transition-all ${topFeedSort === 'income' ? 'clay-btn-active text-emerald-400 bg-slate-800' : ''}`}
+                      className={`py-1.5 rounded-xl transition-all ${topFeedSort === 'income' ? `clay-btn-active text-emerald-500 ${isDark ? 'bg-slate-800' : 'bg-slate-200'}` : ''}`}
                     >
                       Income
                     </button>
                   </div>
 
-                  {highValueTransactions.slice(0, 5).map((tx, idx) => {
+                  {recentTransactions.slice(0, 5).map((tx, idx) => {
                     const catObj = getCategoryInfo(tx.category, tx.type);
                     const IconComp = catObj.icon;
 
@@ -923,18 +1013,18 @@
                           </div>
                           <div className="min-w-0">
                             <div className="flex items-center gap-1.5">
-                              <span className="text-[10px] font-extrabold px-1.5 py-0.5 clay-pill bg-slate-800 text-slate-400">#{idx + 1}</span>
-                              <p className="text-xs font-bold text-slate-100 truncate">{tx.title}</p>
+                              <span className={`text-[10px] font-extrabold px-1.5 py-0.5 clay-pill ${isDark ? 'bg-slate-800 text-slate-400' : 'bg-slate-200 text-slate-600'}`}>#{idx + 1}</span>
+                              <p className={`text-xs font-bold truncate ${isDark ? 'text-slate-100' : 'text-slate-800'}`}>{tx.title}</p>
                             </div>
-                            <p className="text-[11px] text-slate-400 mt-0.5">{catObj.label} • {tx.paymentMethod}</p>
+                            <p className={`text-[11px] mt-0.5 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{catObj.label} • {tx.paymentMethod}</p>
                           </div>
                         </div>
 
                         <div className="text-right shrink-0">
-                          <p className={`text-xs font-extrabold ${tx.type === 'income' ? 'text-emerald-400' : 'text-slate-100'}`}>
+                          <p className={`text-xs font-extrabold ${tx.type === 'income' ? 'text-emerald-500' : isDark ? 'text-slate-100' : 'text-slate-800'}`}>
                             {tx.type === 'income' ? '+' : '-'}{formatINR(tx.amount)}
                           </p>
-                          <p className="text-[10px] text-slate-500 mt-0.5">{tx.date}</p>
+                          <p className={`text-[10px] mt-0.5 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{tx.date}</p>
                         </div>
                       </div>
                     );
@@ -949,12 +1039,12 @@
               <div className="space-y-5 animate-slide-up">
                 
                 <div className="space-y-2">
-                  <div className="grid grid-cols-2 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800">
+                  <div className={`grid grid-cols-2 gap-2 p-1 rounded-xl border ${isDark ? 'bg-slate-950 border-slate-800' : 'bg-slate-200/80 border-slate-300'}`}>
                     <button
                       type="button"
                       onClick={() => setAnalyticsType('expense')}
                       className={`py-2 text-xs font-bold rounded-lg transition-all ${
-                        analyticsType === 'expense' ? 'bg-rose-500 text-white' : 'text-slate-400'
+                        analyticsType === 'expense' ? 'bg-rose-500 text-white' : 'text-slate-500'
                       }`}
                     >
                       Expense Analytics
@@ -963,7 +1053,7 @@
                       type="button"
                       onClick={() => setAnalyticsType('income')}
                       className={`py-2 text-xs font-bold rounded-lg transition-all ${
-                        analyticsType === 'income' ? 'bg-emerald-500 text-slate-950' : 'text-slate-400'
+                        analyticsType === 'income' ? 'bg-emerald-500 text-slate-950' : 'text-slate-500'
                       }`}
                     >
                       Income Analytics
@@ -976,7 +1066,7 @@
                         key={tf}
                         onClick={() => setAnalyticsTimeframe(tf)}
                         className={`py-2 text-[11px] font-semibold rounded-xl transition-all ${
-                          analyticsTimeframe === tf ? 'clay-btn-primary font-bold' : 'text-slate-400 hover:text-white'
+                          analyticsTimeframe === tf ? 'clay-btn-primary font-bold' : isDark ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'
                         }`}
                       >
                         {tf}
@@ -986,27 +1076,31 @@
 
                   {analyticsTimeframe === 'Custom' && (
                     <div className="clay-card p-3 space-y-2">
-                      <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-400">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-500">
                         <Icons.Calendar className="w-4 h-4" />
                         <span>Custom Date Range</span>
                       </div>
                       <div className="grid grid-cols-2 gap-2">
                         <div>
-                          <label className="block text-[10px] font-medium text-slate-400 mb-0.5">Start Date</label>
+                          <label className={`block text-[10px] font-medium mb-0.5 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Start Date</label>
                           <input 
                             type="date"
                             value={customStartDate}
                             onChange={(e) => setCustomStartDate(e.target.value)}
-                            className="w-full bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-white focus:outline-none"
+                            className={`w-full border rounded-xl px-2.5 py-1.5 text-xs focus:outline-none ${
+                              isDark ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-300 text-slate-800'
+                            }`}
                           />
                         </div>
                         <div>
-                          <label className="block text-[10px] font-medium text-slate-400 mb-0.5">End Date</label>
+                          <label className={`block text-[10px] font-medium mb-0.5 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>End Date</label>
                           <input 
                             type="date"
                             value={customEndDate}
                             onChange={(e) => setCustomEndDate(e.target.value)}
-                            className="w-full bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-white focus:outline-none"
+                            className={`w-full border rounded-xl px-2.5 py-1.5 text-xs focus:outline-none ${
+                              isDark ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-300 text-slate-800'
+                            }`}
                           />
                         </div>
                       </div>
@@ -1016,41 +1110,41 @@
 
                 <div className="grid grid-cols-2 gap-3">
                   <div className="clay-card p-3.5 space-y-1">
-                    <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">
+                    <p className={`text-[10px] uppercase tracking-wider font-bold ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
                       Total {analyticsType === 'income' ? 'Income' : 'Spent'}
                     </p>
-                    <p className={`text-base font-extrabold ${analyticsType === 'income' ? 'text-emerald-400' : 'text-rose-400'}`}>
+                    <p className={`text-base font-extrabold ${analyticsType === 'income' ? 'text-emerald-500' : 'text-rose-500'}`}>
                       {formatINR(analyticsKPIs.periodTotal)}
                     </p>
-                    <p className="text-[10px] text-slate-500">{analyticsKPIs.txCount} transactions</p>
+                    <p className={`text-[10px] ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{analyticsKPIs.txCount} transactions</p>
                   </div>
 
                   <div className="clay-card p-3.5 space-y-1">
-                    <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">Daily Average</p>
-                    <p className="text-base font-extrabold text-amber-400">{formatINR(analyticsKPIs.dailyAvg)}</p>
-                    <p className="text-[10px] text-slate-500">per day in range</p>
+                    <p className={`text-[10px] uppercase tracking-wider font-bold ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Daily Average</p>
+                    <p className="text-base font-extrabold text-amber-500">{formatINR(analyticsKPIs.dailyAvg)}</p>
+                    <p className={`text-[10px] ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>per day in range</p>
                   </div>
 
                   <div className="clay-card p-3.5 space-y-1">
-                    <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">Top Category</p>
-                    <p className="text-sm font-bold text-emerald-400 truncate">{analyticsKPIs.topCat}</p>
-                    <p className="text-[10px] text-slate-500">{formatINR(analyticsKPIs.maxCatAmount)}</p>
+                    <p className={`text-[10px] uppercase tracking-wider font-bold ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Top Category</p>
+                    <p className="text-sm font-bold text-emerald-500 truncate">{analyticsKPIs.topCat}</p>
+                    <p className={`text-[10px] ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{formatINR(analyticsKPIs.maxCatAmount)}</p>
                   </div>
 
                   <div className="clay-card p-3.5 space-y-1">
-                    <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">Highest Entry</p>
-                    <p className="text-sm font-bold text-blue-400 truncate">{formatINR(analyticsKPIs.highestAmount)}</p>
-                    <p className="text-[10px] text-slate-500 truncate">{analyticsKPIs.highestTitle}</p>
+                    <p className={`text-[10px] uppercase tracking-wider font-bold ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Highest Entry</p>
+                    <p className="text-sm font-bold text-blue-500 truncate">{formatINR(analyticsKPIs.highestAmount)}</p>
+                    <p className={`text-[10px] truncate ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{analyticsKPIs.highestTitle}</p>
                   </div>
                 </div>
 
                 <div className="clay-card p-4 space-y-3">
                   <div className="flex justify-between items-center">
-                    <h3 className="text-xs font-bold text-slate-300 uppercase tracking-wider inline-flex items-center gap-1.5">
-                      <Icons.PieChart className="w-4 h-4 text-emerald-400" />
+                    <h3 className={`text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5 ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
+                      <Icons.PieChart className="w-4 h-4 text-emerald-500" />
                       {analyticsType === 'income' ? 'Income Category Share' : 'Expense Category Share'}
                     </h3>
-                    <span className="text-[10px] text-slate-400 font-medium">{analyticsTimeframe}</span>
+                    <span className={`text-[10px] font-medium ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{analyticsTimeframe}</span>
                   </div>
                   <div className="relative h-56 w-full pt-1">
                     <canvas ref={categoryChartRef}></canvas>
@@ -1059,11 +1153,11 @@
 
                 <div className="clay-card p-4 space-y-3">
                   <div className="flex justify-between items-center">
-                    <h3 className="text-xs font-bold text-slate-300 uppercase tracking-wider inline-flex items-center gap-1.5">
-                      <Icons.BarChart3 className="w-4 h-4 text-emerald-400" />
+                    <h3 className={`text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5 ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
+                      <Icons.BarChart3 className="w-4 h-4 text-emerald-500" />
                       {analyticsType === 'income' ? 'Income Flow Trend' : 'Spending Trend'}
                     </h3>
-                    <span className="text-[10px] text-slate-400 font-medium">{analyticsTimeframe} Timeline</span>
+                    <span className={`text-[10px] font-medium ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{analyticsTimeframe} Timeline</span>
                   </div>
                   <div className="relative h-48 w-full pt-1">
                     <canvas ref={trendChartRef}></canvas>
@@ -1072,8 +1166,8 @@
 
                 <div className="clay-card p-4 space-y-3">
                   <div className="flex justify-between items-center">
-                    <h3 className="text-xs font-bold text-slate-300 uppercase tracking-wider inline-flex items-center gap-1.5">
-                      <Icons.CreditCard className="w-4 h-4 text-emerald-400" />
+                    <h3 className={`text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5 ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
+                      <Icons.CreditCard className="w-4 h-4 text-emerald-500" />
                       Payment Method Ratio
                     </h3>
                   </div>
@@ -1083,7 +1177,7 @@
                 </div>
 
                 <div className="space-y-2.5">
-                  <h4 className="text-xs font-bold text-slate-400 px-1 uppercase tracking-wider">Detailed Category Breakdown</h4>
+                  <h4 className={`text-xs font-bold px-1 uppercase tracking-wider ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Detailed Category Breakdown</h4>
                   {(analyticsType === 'income' ? INCOME_CATEGORIES : EXPENSE_CATEGORIES).map(cat => {
                     const catTotal = analyticsFilteredTransactions
                       .filter(t => t.type === analyticsType && t.category === cat.id)
@@ -1100,14 +1194,14 @@
                             <div className={`p-1.5 clay-pill ${cat.bgClass} ${cat.textClass}`}>
                               <IconComp className="w-4 h-4" />
                             </div>
-                            <span className="font-semibold text-slate-200">{cat.label}</span>
+                            <span className={`font-semibold ${isDark ? 'text-slate-200' : 'text-slate-700'}`}>{cat.label}</span>
                           </div>
                           <div className="text-right">
-                            <span className="font-bold text-white">{formatINR(catTotal)}</span>
-                            <span className="text-[10px] text-slate-400 ml-1.5">({percent}%)</span>
+                            <span className={`font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>{formatINR(catTotal)}</span>
+                            <span className={`text-[10px] ml-1.5 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>({percent}%)</span>
                           </div>
                         </div>
-                        <div className="w-full bg-slate-950 h-2 clay-pill overflow-hidden">
+                        <div className={`w-full ${isDark ? 'bg-slate-950' : 'bg-slate-200'} h-2 clay-pill overflow-hidden`}>
                           <div className="h-full rounded-full transition-all duration-500" style={{ width: `${percent}%`, backgroundColor: cat.color }} />
                         </div>
                       </div>
@@ -1124,13 +1218,15 @@
                 
                 <div className="clay-card p-3 space-y-2.5">
                   <div className="relative">
-                    <Icons.Search className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+                    <Icons.Search className={`w-4 h-4 absolute left-3 top-3 ${isDark ? 'text-slate-400' : 'text-slate-500'}`} />
                     <input 
                       type="text"
                       placeholder="Search transactions..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-xl pl-9 pr-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none"
+                      className={`w-full border rounded-xl pl-9 pr-3 py-2 text-xs focus:outline-none ${
+                        isDark ? 'bg-slate-900 border-slate-800 text-white placeholder-slate-500' : 'bg-slate-100 border-slate-300 text-slate-800 placeholder-slate-400'
+                      }`}
                     />
                   </div>
 
@@ -1138,7 +1234,9 @@
                     <select
                       value={selectedCat}
                       onChange={(e) => setSelectedCat(e.target.value)}
-                      className="bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-[11px] text-slate-300 focus:outline-none"
+                      className={`border rounded-xl px-2.5 py-1.5 text-[11px] focus:outline-none ${
+                        isDark ? 'bg-slate-900 border-slate-800 text-slate-300' : 'bg-slate-100 border-slate-300 text-slate-700'
+                      }`}
                     >
                       <option value="All">All Categories</option>
                       <optgroup label="Expense Categories">
@@ -1152,7 +1250,9 @@
                     <select
                       value={selectedPayment}
                       onChange={(e) => setSelectedPayment(e.target.value)}
-                      className="bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-[11px] text-slate-300 focus:outline-none"
+                      className={`border rounded-xl px-2.5 py-1.5 text-[11px] focus:outline-none ${
+                        isDark ? 'bg-slate-900 border-slate-800 text-slate-300' : 'bg-slate-100 border-slate-300 text-slate-700'
+                      }`}
                     >
                       <option value="All">All Payment Modes</option>
                       {PAYMENT_METHODS.map(p => <option key={p} value={p}>{p}</option>)}
@@ -1178,25 +1278,25 @@
                               <IconComp className="w-5 h-5" />
                             </div>
                             <div className="min-w-0">
-                              <p className="text-xs font-bold text-slate-100 truncate">{tx.title}</p>
-                              <p className="text-[11px] text-slate-400 mt-0.5">{catObj.label} • {tx.paymentMethod}</p>
-                              {tx.note && <p className="text-[10px] text-slate-500 truncate mt-0.5">{tx.note}</p>}
+                              <p className={`text-xs font-bold truncate ${isDark ? 'text-slate-100' : 'text-slate-800'}`}>{tx.title}</p>
+                              <p className={`text-[11px] mt-0.5 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{catObj.label} • {tx.paymentMethod}</p>
+                              {tx.note && <p className={`text-[10px] truncate mt-0.5 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{tx.note}</p>}
                             </div>
                           </div>
 
                           <div className="flex items-center gap-3 shrink-0">
                             <div className="text-right">
-                              <p className={`text-xs font-bold ${tx.type === 'income' ? 'text-emerald-400' : 'text-slate-100'}`}>
+                              <p className={`text-xs font-bold ${tx.type === 'income' ? 'text-emerald-500' : isDark ? 'text-slate-100' : 'text-slate-800'}`}>
                                 {tx.type === 'income' ? '+' : '-'}{formatINR(tx.amount)}
                               </p>
-                              <p className="text-[10px] text-slate-500 mt-0.5">{tx.date}</p>
+                              <p className={`text-[10px] mt-0.5 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{tx.date}</p>
                             </div>
 
-                            <div className="flex items-center gap-1 border-l border-slate-800 pl-2">
-                              <button onClick={() => handleEdit(tx)} className="p-1.5 text-slate-400 hover:text-emerald-400">
+                            <div className={`flex items-center gap-1 border-l pl-2 ${isDark ? 'border-slate-800' : 'border-slate-200'}`}>
+                              <button onClick={() => handleEdit(tx)} className="p-1.5 text-slate-400 hover:text-emerald-500">
                                 <Icons.Edit3 className="w-3.5 h-3.5" />
                               </button>
-                              <button onClick={() => handleDelete(tx.id)} className="p-1.5 text-slate-400 hover:text-rose-400">
+                              <button onClick={() => handleDelete(tx.id)} className="p-1.5 text-slate-400 hover:text-rose-500">
                                 <Icons.Trash2 className="w-3.5 h-3.5" />
                               </button>
                             </div>
@@ -1214,8 +1314,34 @@
             {activeTab === 'settings' && (
               <div className="space-y-5 animate-slide-up">
                 
+                <div className="clay-card p-4 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className={`text-xs font-bold uppercase tracking-wider ${isDark ? 'text-slate-200' : 'text-slate-800'}`}>App Theme</h3>
+                      <p className={`text-[11px] mt-0.5 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Switch between Light and Dark mode</p>
+                    </div>
+
+                    <button 
+                      onClick={toggleTheme}
+                      className="px-3.5 py-2 clay-btn font-bold text-xs inline-flex items-center gap-2"
+                    >
+                      {isDark ? (
+                        <>
+                          <Icons.Sun className="w-4 h-4 text-amber-400" />
+                          <span>Light Mode</span>
+                        </>
+                      ) : (
+                        <>
+                          <Icons.Moon className="w-4 h-4 text-slate-700" />
+                          <span>Dark Mode</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
+
                 <div className={`p-4 clay-card text-xs space-y-2 ${
-                  fbStatus.connected ? 'border border-emerald-500/30 text-emerald-300' : 'border border-amber-500/30 text-amber-300'
+                  fbStatus.connected ? 'border border-emerald-500/30 text-emerald-400' : 'border border-amber-500/30 text-amber-500'
                 }`}>
                   <div className="flex items-center gap-2 font-bold text-sm">
                     <span>{fbStatus.connected ? '🟢' : '🟡'}</span>
@@ -1226,8 +1352,8 @@
 
                 <div className="clay-card p-4 space-y-3">
                   <div>
-                    <h3 className="text-xs font-bold text-slate-200 uppercase tracking-wider">Cloud Firestore Config</h3>
-                    <p className="text-[11px] text-slate-400 mt-0.5">Paste Firebase JSON SDK configuration.</p>
+                    <h3 className={`text-xs font-bold uppercase tracking-wider ${isDark ? 'text-slate-200' : 'text-slate-800'}`}>Cloud Firestore Config</h3>
+                    <p className={`text-[11px] mt-0.5 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Paste Firebase JSON SDK configuration.</p>
                   </div>
 
                   <textarea
@@ -1235,7 +1361,9 @@
                     value={firebaseConfig}
                     onChange={(e) => setFirebaseConfig(e.target.value)}
                     placeholder={`{\n  "apiKey": "...",\n  "projectId": "..."\n}`}
-                    className="w-full p-3 font-mono text-xs bg-slate-900 border border-slate-800 rounded-xl text-slate-200 focus:outline-none"
+                    className={`w-full p-3 font-mono text-xs border rounded-xl focus:outline-none ${
+                      isDark ? 'bg-slate-900 border-slate-800 text-slate-200' : 'bg-slate-50 border-slate-300 text-slate-800'
+                    }`}
                   />
 
                   <button
@@ -1249,14 +1377,16 @@
                 </div>
 
                 <div className="clay-card p-4 space-y-3">
-                  <h3 className="text-xs font-bold text-slate-200 uppercase tracking-wider">Monthly Expense Budget Limit</h3>
+                  <h3 className={`text-xs font-bold uppercase tracking-wider ${isDark ? 'text-slate-200' : 'text-slate-800'}`}>Monthly Expense Budget Limit</h3>
                   <div className="relative">
-                    <span className="absolute left-3.5 top-2.5 text-xs text-slate-400 font-bold">₹</span>
+                    <span className={`absolute left-3.5 top-2.5 text-xs font-bold ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>₹</span>
                     <input 
                       type="number"
                       value={monthlyBudget}
                       onChange={(e) => setMonthlyBudget(Number(e.target.value))}
-                      className="w-full pl-8 pr-3 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs text-white font-bold focus:outline-none"
+                      className={`w-full pl-8 pr-3 py-2 border rounded-xl text-xs font-bold focus:outline-none ${
+                        isDark ? 'bg-slate-900 border-slate-800 text-white' : 'bg-slate-50 border-slate-300 text-slate-900'
+                      }`}
                     />
                   </div>
                 </div>
@@ -1276,7 +1406,7 @@
           <nav className="clay-nav fixed bottom-0 left-0 right-0 max-w-md mx-auto z-30 px-4 py-2 flex justify-around items-center">
             <button 
               onClick={() => setActiveTab('home')}
-              className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${activeTab === 'home' ? 'text-emerald-400 font-bold' : 'text-slate-400'}`}
+              className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${activeTab === 'home' ? 'text-emerald-500 font-bold' : isDark ? 'text-slate-400' : 'text-slate-500'}`}
             >
               <Icons.HomeNav className="w-5 h-5" />
               <span className="text-[10px]">Home</span>
@@ -1284,7 +1414,7 @@
 
             <button 
               onClick={() => setActiveTab('analytics')}
-              className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${activeTab === 'analytics' ? 'text-emerald-400 font-bold' : 'text-slate-400'}`}
+              className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${activeTab === 'analytics' ? 'text-emerald-500 font-bold' : isDark ? 'text-slate-400' : 'text-slate-500'}`}
             >
               <Icons.BarChart3 className="w-5 h-5" />
               <span className="text-[10px]">Analytics</span>
@@ -1292,7 +1422,7 @@
 
             <button 
               onClick={() => setActiveTab('transactions')}
-              className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${activeTab === 'transactions' ? 'text-emerald-400 font-bold' : 'text-slate-400'}`}
+              className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${activeTab === 'transactions' ? 'text-emerald-500 font-bold' : isDark ? 'text-slate-400' : 'text-slate-500'}`}
             >
               <Icons.Receipt className="w-5 h-5" />
               <span className="text-[10px]">History</span>
@@ -1300,7 +1430,7 @@
 
             <button 
               onClick={() => setActiveTab('settings')}
-              className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${activeTab === 'settings' ? 'text-emerald-400 font-bold' : 'text-slate-400'}`}
+              className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${activeTab === 'settings' ? 'text-emerald-500 font-bold' : isDark ? 'text-slate-400' : 'text-slate-500'}`}
             >
               <Icons.Settings className="w-5 h-5" />
               <span className="text-[10px]">Sync</span>
@@ -1309,18 +1439,20 @@
 
           {isAddModalOpen && (
             <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-end justify-center p-0">
-              <div className="w-full max-w-md bg-slate-900 border-t border-slate-800 rounded-t-3xl p-5 space-y-4 max-h-[85vh] overflow-y-auto animate-slide-up">
-                <div className="flex justify-between items-center border-b border-slate-800 pb-3">
-                  <h3 className="text-sm font-bold text-white">
+              <div className={`w-full max-w-md border-t rounded-t-3xl p-5 space-y-4 max-h-[85vh] overflow-y-auto animate-slide-up ${
+                isDark ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
+              }`}>
+                <div className={`flex justify-between items-center border-b pb-3 ${isDark ? 'border-slate-800' : 'border-slate-200'}`}>
+                  <h3 className={`text-sm font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>
                     {editingTx ? 'Edit Transaction' : 'Add New Transaction'}
                   </h3>
-                  <button onClick={() => setIsAddModalOpen(false)} className="text-slate-400 hover:text-white p-1">
+                  <button onClick={() => setIsAddModalOpen(false)} className={`p-1 ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                     <Icons.X className="w-5 h-5" />
                   </button>
                 </div>
 
                 <form onSubmit={handleSaveTransaction} className="space-y-3.5">
-                  <div className="grid grid-cols-2 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800">
+                  <div className={`grid grid-cols-2 gap-2 p-1 rounded-xl border ${isDark ? 'bg-slate-950 border-slate-800' : 'bg-slate-100 border-slate-300'}`}>
                     <button
                       type="button"
                       onClick={() => handleTypeChange('expense')}
@@ -1342,19 +1474,21 @@
                   </div>
 
                   <div>
-                    <label className="block text-[11px] font-bold text-slate-400 mb-1 uppercase">Title</label>
+                    <label className={`block text-[11px] font-bold mb-1 uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Title</label>
                     <input 
                       type="text"
                       required
                       placeholder="e.g. Swiggy, Fuel, Salary, Mutual Fund"
                       value={formData.title}
                       onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none"
+                      className={`w-full border rounded-xl px-3 py-2.5 text-xs focus:outline-none ${
+                        isDark ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-300 text-slate-900'
+                      }`}
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[11px] font-bold text-slate-400 mb-1 uppercase">Amount (₹ INR)</label>
+                    <label className={`block text-[11px] font-bold mb-1 uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Amount (₹ INR)</label>
                     <input 
                       type="number"
                       step="0.01"
@@ -1362,17 +1496,21 @@
                       placeholder="0.00"
                       value={formData.amount}
                       onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-white font-bold focus:outline-none"
+                      className={`w-full border rounded-xl px-3 py-2.5 text-xs font-bold focus:outline-none ${
+                        isDark ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-300 text-slate-900'
+                      }`}
                     />
                   </div>
 
                   <div className="grid grid-cols-2 gap-2">
                     <div>
-                      <label className="block text-[11px] font-bold text-slate-400 mb-1 uppercase">Category</label>
+                      <label className={`block text-[11px] font-bold mb-1 uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Category</label>
                       <select
                         value={formData.category}
                         onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                        className="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-2.5 text-xs text-white focus:outline-none"
+                        className={`w-full border rounded-xl px-2.5 py-2.5 text-xs focus:outline-none ${
+                          isDark ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-300 text-slate-900'
+                        }`}
                       >
                         {(formData.type === 'income' ? INCOME_CATEGORIES : EXPENSE_CATEGORIES).map(c => (
                           <option key={c.id} value={c.id}>{c.label}</option>
@@ -1381,11 +1519,13 @@
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-bold text-slate-400 mb-1 uppercase">Payment Method</label>
+                      <label className={`block text-[11px] font-bold mb-1 uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Payment Method</label>
                       <select
                         value={formData.paymentMethod}
                         onChange={(e) => setFormData({ ...formData, paymentMethod: e.target.value })}
-                        className="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-2.5 text-xs text-white focus:outline-none"
+                        className={`w-full border rounded-xl px-2.5 py-2.5 text-xs focus:outline-none ${
+                          isDark ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-300 text-slate-900'
+                        }`}
                       >
                         {PAYMENT_METHODS.map(p => <option key={p} value={p}>{p}</option>)}
                       </select>
@@ -1393,24 +1533,28 @@
                   </div>
 
                   <div>
-                    <label className="block text-[11px] font-bold text-slate-400 mb-1 uppercase">Date</label>
+                    <label className={`block text-[11px] font-bold mb-1 uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Date</label>
                     <input 
                       type="date"
                       required
                       value={formData.date}
                       onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none"
+                      className={`w-full border rounded-xl px-3 py-2 text-xs focus:outline-none ${
+                        isDark ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-300 text-slate-900'
+                      }`}
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[11px] font-bold text-slate-400 mb-1 uppercase">Notes (Optional)</label>
+                    <label className={`block text-[11px] font-bold mb-1 uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Notes (Optional)</label>
                     <textarea 
                       rows="2"
                       placeholder="Add details..."
                       value={formData.note}
                       onChange={(e) => setFormData({ ...formData, note: e.target.value })}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none"
+                      className={`w-full border rounded-xl px-3 py-2 text-xs focus:outline-none ${
+                        isDark ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-300 text-slate-900'
+                      }`}
                     />
                   </div>
 
