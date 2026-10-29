@@ -148,7 +148,7 @@
     );
 
     const Icons = {
-      Home: (props) => <Icon {...props} path={<><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></>} />,
+      HomeNav: (props) => <Icon {...props} path={<><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></>} />,
       BarChart3: (props) => <Icon {...props} path={<><path d="M3 3v18h18"/><rect width="4" height="7" x="7" y="10" rx="1"/><rect width="4" height="12" x="15" y="5" rx="1"/><rect width="4" height="4" x="11" y="13" rx="1"/></>} />,
       Receipt: (props) => <Icon {...props} path={<><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v12"/></>} />,
       Settings: (props) => <Icon {...props} path={<><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></>} />,
@@ -172,7 +172,15 @@
       PieChart: (props) => <Icon {...props} path={<><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></>} />,
       Calendar: (props) => <Icon {...props} path={<><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></>} />,
       CheckCircle2: (props) => <Icon {...props} path={<><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></>} />,
-      Loader2: (props) => <Icon {...props} path={<><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></>} />
+      Loader2: (props) => <Icon {...props} path={<><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></>} />,
+      Briefcase: (props) => <Icon {...props} path={<><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></>} />,
+      Landmark: (props) => <Icon {...props} path={<><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7 12 2"/></>} />,
+      Gift: (props) => <Icon {...props} path={<><polyline points="20 12 20 22 4 22 4 12"/><rect width="20" height="5" x="2" y="7" rx="1"/><line x1="12" x2="12" y1="22" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></>} />,
+      Tag: (props) => <Icon {...props} path={<><path d="M12 2H2v10l11.29 11.29a1 1 0 0 0 1.42 0l7.58-7.58a1 1 0 0 0 0-1.42L12 2z"/><circle cx="7" cy="7" r="2"/></>} />,
+      PiggyBank: (props) => <Icon {...props} path={<><path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-3.5c1-.5 2-1 2.5-2.5 1-.5 2.5-2 2.5-4 0-1.5-1-2.5-2.5-3-.2-.5-1-2-2.5-2z"/><path d="M16 11h.01"/></>} />,
+      Shield: (props) => <Icon {...props} path={<><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></>} />,
+      GraduationCap: (props) => <Icon {...props} path={<><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></>} />,
+      Home: (props) => <Icon {...props} path={<><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></>} />
     };
 
     // --- INR Currency Formatter ---
@@ -184,18 +192,58 @@
       }).format(val || 0);
     };
 
-    // --- Preset Mobile Categories & Payment Modes ---
-    const CATEGORIES = [
+    // --- Comprehensive Indian Expense Categories ---
+    const EXPENSE_CATEGORIES = [
       { id: 'Food', label: 'Food & Dining', icon: Icons.Utensils, color: '#f59e0b', textClass: 'text-amber-400', bgClass: 'bg-amber-500/10' },
-      { id: 'Shopping', label: 'Shopping', icon: Icons.ShoppingBag, color: '#ec4899', textClass: 'text-pink-400', bgClass: 'bg-pink-500/10' },
-      { id: 'Transport', label: 'Transport', icon: Icons.Car, color: '#10b981', textClass: 'text-emerald-400', bgClass: 'bg-emerald-500/10' },
+      { id: 'Groceries', label: 'Groceries & Provisions', icon: Icons.ShoppingBag, color: '#10b981', textClass: 'text-emerald-400', bgClass: 'bg-emerald-500/10' },
+      { id: 'Housing', label: 'Housing & Rent', icon: Icons.Home, color: '#8b5cf6', textClass: 'text-violet-400', bgClass: 'bg-violet-500/10' },
       { id: 'Bills', label: 'Bills & Utilities', icon: Icons.Zap, color: '#3b82f6', textClass: 'text-blue-400', bgClass: 'bg-blue-500/10' },
-      { id: 'Entertainment', label: 'Entertainment', icon: Icons.Film, color: '#a855f7', textClass: 'text-purple-400', bgClass: 'bg-purple-500/10' },
-      { id: 'Health', label: 'Health', icon: Icons.HeartPulse, color: '#f43f5e', textClass: 'text-rose-400', bgClass: 'bg-rose-500/10' },
+      { id: 'Transport', label: 'Transport & Fuel', icon: Icons.Car, color: '#06b6d4', textClass: 'text-cyan-400', bgClass: 'bg-cyan-500/10' },
+      { id: 'Shopping', label: 'Shopping & Retail', icon: Icons.Tag, color: '#ec4899', textClass: 'text-pink-400', bgClass: 'bg-pink-500/10' },
+      { id: 'Entertainment', label: 'Entertainment & OTT', icon: Icons.Film, color: '#a855f7', textClass: 'text-purple-400', bgClass: 'bg-purple-500/10' },
+      { id: 'Health', label: 'Health & Medical', icon: Icons.HeartPulse, color: '#f43f5e', textClass: 'text-rose-400', bgClass: 'bg-rose-500/10' },
+      { id: 'Insurance', label: 'Insurance & Financial', icon: Icons.Shield, color: '#6366f1', textClass: 'text-indigo-400', bgClass: 'bg-indigo-500/10' },
+      { id: 'Education', label: 'Education & Courses', icon: Icons.GraduationCap, color: '#0284c7', textClass: 'text-sky-400', bgClass: 'bg-sky-500/10' },
+      { id: 'Investments', label: 'Investments & Savings', icon: Icons.PiggyBank, color: '#14b8a6', textClass: 'text-teal-400', bgClass: 'bg-teal-500/10' },
       { id: 'Others', label: 'Others', icon: Icons.CreditCard, color: '#64748b', textClass: 'text-slate-400', bgClass: 'bg-slate-500/10' }
     ];
 
-    const PAYMENT_METHODS = ['UPI', 'Card', 'Cash', 'Net Banking'];
+    // --- Comprehensive Indian Income Categories ---
+    const INCOME_CATEGORIES = [
+      { id: 'Salary', label: 'Salary & Wage', icon: Icons.Briefcase, color: '#10b981', textClass: 'text-emerald-400', bgClass: 'bg-emerald-500/10' },
+      { id: 'Freelance', label: 'Freelance & Business', icon: Icons.Briefcase, color: '#3b82f6', textClass: 'text-blue-400', bgClass: 'bg-blue-500/10' },
+      { id: 'Investments', label: 'Investments & Mutual Funds', icon: Icons.Landmark, color: '#8b5cf6', textClass: 'text-purple-400', bgClass: 'bg-purple-500/10' },
+      { id: 'Cashback', label: 'Cashback & Rewards', icon: Icons.Tag, color: '#f59e0b', textClass: 'text-amber-400', bgClass: 'bg-amber-500/10' },
+      { id: 'Gifts', label: 'Gifts & Allowances', icon: Icons.Gift, color: '#ec4899', textClass: 'text-pink-400', bgClass: 'bg-pink-500/10' },
+      { id: 'Rental', label: 'Rental Income', icon: Icons.Home, color: '#06b6d4', textClass: 'text-cyan-400', bgClass: 'bg-cyan-500/10' },
+      { id: 'Other Income', label: 'Other Income', icon: Icons.Rupee, color: '#64748b', textClass: 'text-slate-400', bgClass: 'bg-slate-500/10' }
+    ];
+
+    // --- Combined Category Lookup ---
+    const ALL_CATEGORIES = [...EXPENSE_CATEGORIES, ...INCOME_CATEGORIES];
+
+    const getCategoryInfo = (catId, type = 'expense') => {
+      const list = type === 'income' ? INCOME_CATEGORIES : EXPENSE_CATEGORIES;
+      return list.find(c => c.id === catId) || ALL_CATEGORIES.find(c => c.id === catId) || {
+        id: catId,
+        label: catId,
+        icon: Icons.CreditCard,
+        color: '#64748b',
+        textClass: 'text-slate-400',
+        bgClass: 'bg-slate-500/10'
+      };
+    };
+
+    // --- Comprehensive Payment Modes in Indian Ecosystem ---
+    const PAYMENT_METHODS = [
+      'UPI',
+      'Credit Card',
+      'Debit Card',
+      'Net Banking',
+      'Cash',
+      'Wallet',
+      'Bank Transfer / NEFT / IMPS'
+    ];
 
     // --- Firebase Service ---
     const FirebaseService = {
@@ -258,18 +306,19 @@
 
     // --- Rich Demo Default Data ---
     const INITIAL_TRANSACTIONS = [
-      { id: '1', title: 'Monthly Salary', amount: 95000, type: 'income', category: 'Others', date: '2026-10-01', paymentMethod: 'Net Banking', note: 'Tech Corp Salary' },
-      { id: '2', title: 'House Rent', amount: 24000, type: 'expense', category: 'Bills', date: '2026-10-02', paymentMethod: 'UPI', note: 'Flat rent payment' },
-      { id: '3', title: 'Grocery Supermarket', amount: 3850, type: 'expense', category: 'Food', date: '2026-10-05', paymentMethod: 'UPI', note: 'Weekly groceries' },
-      { id: '4', title: 'Electricity & Internet', amount: 2900, type: 'expense', category: 'Bills', date: '2026-10-10', paymentMethod: 'Card', note: 'Wi-Fi + Power' },
-      { id: '5', title: 'Freelance Mobile App', amount: 18000, type: 'income', category: 'Others', date: '2026-10-14', paymentMethod: 'Net Banking', note: 'Client milestone' },
-      { id: '6', title: 'Movie & Dinner', amount: 2400, type: 'expense', category: 'Entertainment', date: '2026-10-18', paymentMethod: 'UPI', note: 'Weekend outing' },
-      { id: '7', title: 'Car Fuel Fill-up', amount: 3200, type: 'expense', category: 'Transport', date: '2026-10-22', paymentMethod: 'Card', note: 'Petrol' },
-      { id: '8', title: 'Pharmacy Medicines', amount: 1150, type: 'expense', category: 'Health', date: '2026-10-24', paymentMethod: 'UPI', note: 'Supplements' },
-      { id: '9', title: 'Zomato Food Order', amount: 680, type: 'expense', category: 'Food', date: '2026-10-25', paymentMethod: 'UPI', note: 'Dinner order' },
-      { id: '10', title: 'Clothing Store', amount: 4500, type: 'expense', category: 'Shopping', date: '2026-10-26', paymentMethod: 'Card', note: 'Festive shopping' },
-      { id: '11', title: 'D-Mart Monthly', amount: 6200, type: 'expense', category: 'Food', date: '2026-09-12', paymentMethod: 'UPI', note: 'September Provisions' },
-      { id: '12', title: 'Quarterly Insurance', amount: 8500, type: 'expense', category: 'Health', date: '2026-09-20', paymentMethod: 'Net Banking', note: 'Health Policy' }
+      { id: '1', title: 'Monthly Tech Salary', amount: 95000, type: 'income', category: 'Salary', date: '2026-10-01', paymentMethod: 'Bank Transfer / NEFT / IMPS', note: 'Software Engineer Salary' },
+      { id: '2', title: 'Apartment Maintenance & Rent', amount: 24000, type: 'expense', category: 'Housing', date: '2026-10-02', paymentMethod: 'UPI', note: '2BHK Apartment' },
+      { id: '3', title: 'D-Mart Monthly Provisions', amount: 5850, type: 'expense', category: 'Groceries', date: '2026-10-05', paymentMethod: 'UPI', note: 'Monthly groceries' },
+      { id: '4', title: 'Electricity & Broadband Bill', amount: 2900, type: 'expense', category: 'Bills', date: '2026-10-10', paymentMethod: 'Credit Card', note: 'Fiber net + Power bill' },
+      { id: '5', title: 'Freelance Web Design', amount: 18000, type: 'income', category: 'Freelance', date: '2026-10-14', paymentMethod: 'Net Banking', note: 'Client website completion' },
+      { id: '6', title: 'PVR IMAX & Dinner Outing', amount: 2400, type: 'expense', category: 'Entertainment', date: '2026-10-18', paymentMethod: 'UPI', note: 'Weekend movie & dinner' },
+      { id: '7', title: 'Petrol Refill - Honda City', amount: 3200, type: 'expense', category: 'Transport', date: '2026-10-22', paymentMethod: 'Debit Card', note: 'Full tank fuel' },
+      { id: '8', title: 'Apollo Pharmacy Medicines', amount: 1150, type: 'expense', category: 'Health', date: '2026-10-24', paymentMethod: 'UPI', note: 'Family medical' },
+      { id: '9', title: 'Zomato Gourmet Dinner', amount: 680, type: 'expense', category: 'Food', date: '2026-10-25', paymentMethod: 'UPI', note: 'Dinner order' },
+      { id: '10', title: 'Festive Apparel Shopping', amount: 4500, type: 'expense', category: 'Shopping', date: '2026-10-26', paymentMethod: 'Credit Card', note: 'Diwali wear' },
+      { id: '11', title: 'SIP Investment Mutual Fund', amount: 10000, type: 'expense', category: 'Investments', date: '2026-10-05', paymentMethod: 'Net Banking', note: 'Nifty 50 Index Fund' },
+      { id: '12', title: 'Health Insurance Premium', amount: 8500, type: 'expense', category: 'Insurance', date: '2026-09-20', paymentMethod: 'Credit Card', note: 'Annual Floater Plan' },
+      { id: '13', title: 'Cred App Reward Cashback', amount: 350, type: 'income', category: 'Cashback', date: '2026-10-12', paymentMethod: 'UPI', note: 'Bill payment reward' }
     ];
 
     function App() {
@@ -283,6 +332,7 @@
       const [topFeedSort, setTopFeedSort] = useState('all');
 
       const [analyticsTimeframe, setAnalyticsTimeframe] = useState('Monthly');
+      const [analyticsType, setAnalyticsType] = useState('expense'); // 'expense' or 'income'
       const [customStartDate, setCustomStartDate] = useState(() => {
         const d = new Date();
         d.setMonth(d.getMonth() - 1);
@@ -424,6 +474,7 @@
         const now = new Date();
         return transactions.filter(t => {
           if (!t.date) return false;
+          if (t.type !== analyticsType) return false;
           const txDate = new Date(t.date);
 
           if (analyticsTimeframe === 'Weekly') {
@@ -446,11 +497,10 @@
           }
           return true;
         });
-      }, [transactions, analyticsTimeframe, customStartDate, customEndDate]);
+      }, [transactions, analyticsTimeframe, analyticsType, customStartDate, customEndDate]);
 
       const analyticsKPIs = useMemo(() => {
-        const periodExpenses = analyticsFilteredTransactions.filter(t => t.type === 'expense');
-        const periodSpent = periodExpenses.reduce((sum, t) => sum + Number(t.amount), 0);
+        const periodTotal = analyticsFilteredTransactions.reduce((sum, t) => sum + Number(t.amount), 0);
 
         let days = 1;
         if (analyticsTimeframe === 'Weekly') days = 7;
@@ -460,28 +510,28 @@
           const diff = Math.abs(new Date(customEndDate) - new Date(customStartDate));
           days = Math.max(1, Math.ceil(diff / (1000 * 60 * 60 * 24)));
         }
-        const dailyAvg = periodSpent / days;
+        const dailyAvg = periodTotal / days;
 
         const catMap = {};
-        periodExpenses.forEach(t => { catMap[t.category] = (catMap[t.category] || 0) + Number(t.amount); });
+        analyticsFilteredTransactions.forEach(t => { catMap[t.category] = (catMap[t.category] || 0) + Number(t.amount); });
         let topCat = 'None', maxCatAmount = 0;
         Object.entries(catMap).forEach(([cat, amt]) => {
           if (amt > maxCatAmount) { maxCatAmount = amt; topCat = cat; }
         });
 
         let highestTx = null;
-        periodExpenses.forEach(t => {
+        analyticsFilteredTransactions.forEach(t => {
           if (!highestTx || Number(t.amount) > Number(highestTx.amount)) highestTx = t;
         });
 
         return {
-          periodSpent,
+          periodTotal,
           dailyAvg,
           topCat,
           maxCatAmount,
-          highestExpense: highestTx ? highestTx.amount : 0,
-          highestExpenseTitle: highestTx ? highestTx.title : 'None',
-          txCount: periodExpenses.length
+          highestAmount: highestTx ? highestTx.amount : 0,
+          highestTitle: highestTx ? highestTx.title : 'None',
+          txCount: analyticsFilteredTransactions.length
         };
       }, [analyticsFilteredTransactions, analyticsTimeframe, customStartDate, customEndDate]);
 
@@ -575,11 +625,20 @@
           title: '',
           amount: '',
           type: 'expense',
-          category: 'Food',
+          category: EXPENSE_CATEGORIES[0].id,
           date: new Date().toISOString().split('T')[0],
           paymentMethod: 'UPI',
           note: ''
         });
+      };
+
+      const handleTypeChange = (newType) => {
+        const defaultCat = newType === 'income' ? INCOME_CATEGORIES[0].id : EXPENSE_CATEGORIES[0].id;
+        setFormData(prev => ({
+          ...prev,
+          type: newType,
+          category: defaultCat
+        }));
       };
 
       const handleEdit = (tx) => {
@@ -612,7 +671,7 @@
         const encodedUri = encodeURI(csvContent);
         const link = document.createElement('a');
         link.setAttribute('href', encodedUri);
-        link.setAttribute('download', `Expenses_${new Date().toISOString().split('T')[0]}.csv`);
+        link.setAttribute('download', `Transactions_${new Date().toISOString().split('T')[0]}.csv`);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -622,7 +681,7 @@
       useEffect(() => {
         if (activeTab !== 'analytics' || typeof window.Chart === 'undefined') return;
 
-        const periodExpenses = analyticsFilteredTransactions.filter(t => t.type === 'expense');
+        const targetCategories = analyticsType === 'income' ? INCOME_CATEGORIES : EXPENSE_CATEGORIES;
 
         // Doughnut Chart
         if (categoryChartRef.current) {
@@ -630,11 +689,11 @@
           if (categoryChartInstance.current) categoryChartInstance.current.destroy();
 
           const catTotals = {};
-          CATEGORIES.forEach(c => { catTotals[c.id] = 0; });
-          periodExpenses.forEach(t => { catTotals[t.category] = (catTotals[t.category] || 0) + Number(t.amount); });
+          targetCategories.forEach(c => { catTotals[c.id] = 0; });
+          analyticsFilteredTransactions.forEach(t => { catTotals[t.category] = (catTotals[t.category] || 0) + Number(t.amount); });
 
-          const activeCats = CATEGORIES.filter(c => catTotals[c.id] > 0);
-          const labels = activeCats.length ? activeCats.map(c => c.label) : ['No Expenses'];
+          const activeCats = targetCategories.filter(c => catTotals[c.id] > 0);
+          const labels = activeCats.length ? activeCats.map(c => c.label) : ['No Data'];
           const data = activeCats.length ? activeCats.map(c => catTotals[c.id]) : [1];
           const colors = activeCats.length ? activeCats.map(c => c.color) : ['#334155'];
 
@@ -648,9 +707,9 @@
               responsive: true,
               maintainAspectRatio: false,
               plugins: {
-                legend: { position: 'bottom', labels: { color: '#94a3b8', font: { size: 11 } } }
+                legend: { position: 'bottom', labels: { color: '#94a3b8', font: { size: 10 } } }
               },
-              cutout: '70%'
+              cutout: '68%'
             }
           });
         }
@@ -661,17 +720,19 @@
           if (trendChartInstance.current) trendChartInstance.current.destroy();
 
           const trendMap = {};
-          const sorted = [...periodExpenses].sort((a, b) => new Date(a.date) - new Date(b.date));
+          const sorted = [...analyticsFilteredTransactions].sort((a, b) => new Date(a.date) - new Date(b.date));
           sorted.forEach(t => { trendMap[t.date] = (trendMap[t.date] || 0) + Number(t.amount); });
+
+          const barColor = analyticsType === 'income' ? 'rgba(16, 185, 129, 0.75)' : 'rgba(244, 63, 94, 0.75)';
 
           trendChartInstance.current = new window.Chart(ctx, {
             type: 'bar',
             data: {
               labels: Object.keys(trendMap).length ? Object.keys(trendMap) : ['No Data'],
               datasets: [{
-                label: 'Spending (₹)',
+                label: analyticsType === 'income' ? 'Income (₹)' : 'Spending (₹)',
                 data: Object.values(trendMap).length ? Object.values(trendMap) : [0],
-                backgroundColor: 'rgba(16, 185, 129, 0.7)',
+                backgroundColor: barColor,
                 borderRadius: 6
               }]
             },
@@ -694,25 +755,30 @@
 
           const payTotals = {};
           PAYMENT_METHODS.forEach(m => { payTotals[m] = 0; });
-          periodExpenses.forEach(t => {
+          analyticsFilteredTransactions.forEach(t => {
             const mode = t.paymentMethod || 'UPI';
             payTotals[mode] = (payTotals[mode] || 0) + Number(t.amount);
           });
 
+          const activeModes = PAYMENT_METHODS.filter(m => payTotals[m] > 0);
+          const labels = activeModes.length ? activeModes : ['No Data'];
+          const data = activeModes.length ? activeModes.map(m => payTotals[m]) : [1];
+          const colors = ['#10b981', '#3b82f6', '#f59e0b', '#a855f7', '#06b6d4', '#ec4899', '#6366f1'];
+
           paymentChartInstance.current = new window.Chart(ctx, {
             type: 'pie',
             data: {
-              labels: Object.keys(payTotals),
+              labels,
               datasets: [{
-                data: Object.values(payTotals),
-                backgroundColor: ['#10b981', '#3b82f6', '#f59e0b', '#a855f7'],
+                data,
+                backgroundColor: colors.slice(0, labels.length),
                 borderWidth: 0
               }]
             },
             options: {
               responsive: true,
               maintainAspectRatio: false,
-              plugins: { legend: { position: 'right', labels: { color: '#94a3b8', font: { size: 11 } } } }
+              plugins: { legend: { position: 'right', labels: { color: '#94a3b8', font: { size: 10 } } } }
             }
           });
         }
@@ -722,7 +788,7 @@
           if (trendChartInstance.current) trendChartInstance.current.destroy();
           if (paymentChartInstance.current) paymentChartInstance.current.destroy();
         };
-      }, [analyticsFilteredTransactions, activeTab, analyticsTimeframe]);
+      }, [analyticsFilteredTransactions, activeTab, analyticsTimeframe, analyticsType]);
 
       return (
         <div className="h-full w-full max-w-md mx-auto bg-slate-950 flex flex-col relative overflow-hidden border-x border-slate-800/80">
@@ -793,7 +859,7 @@
 
                 <div className="clay-card p-5 space-y-3">
                   <div className="flex justify-between items-center text-xs">
-                    <span className="font-semibold text-slate-300">Monthly Budget</span>
+                    <span className="font-semibold text-slate-300">Monthly Expense Budget</span>
                     <span className="text-slate-400">{formatINR(totalExpense)} / {formatINR(monthlyBudget)}</span>
                   </div>
 
@@ -815,7 +881,7 @@
                 <div className="space-y-3">
                   <div className="flex justify-between items-center px-1">
                     <div>
-                      <h3 className="text-xs font-bold text-slate-300 uppercase tracking-wider">High-Value Transactions</h3>
+                      <h3 className="text-xs font-bold text-slate-300 uppercase tracking-wider">Top Value Transactions</h3>
                       <p className="text-[10px] text-slate-400">Sorted by highest amount</p>
                     </div>
                     <button onClick={() => setActiveTab('transactions')} className="text-xs text-emerald-400 font-semibold hover:underline">
@@ -845,12 +911,12 @@
                   </div>
 
                   {highValueTransactions.slice(0, 5).map((tx, idx) => {
-                    const catObj = CATEGORIES.find(c => c.id === tx.category) || CATEGORIES[6];
+                    const catObj = getCategoryInfo(tx.category, tx.type);
                     const IconComp = catObj.icon;
 
                     return (
                       <div key={tx.id} className="clay-card p-3.5 flex items-center justify-between touch-press relative overflow-hidden">
-                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-400 to-teal-500"></div>
+                        <div className={`absolute left-0 top-0 bottom-0 w-1 ${tx.type === 'income' ? 'bg-emerald-400' : 'bg-rose-500'}`}></div>
                         <div className="inline-flex items-center gap-3 min-w-0 pl-1">
                           <div className={`p-2.5 clay-pill ${catObj.bgClass} ${catObj.textClass} inline-flex items-center justify-center shrink-0`}>
                             <IconComp className="w-5 h-5" />
@@ -860,7 +926,7 @@
                               <span className="text-[10px] font-extrabold px-1.5 py-0.5 clay-pill bg-slate-800 text-slate-400">#{idx + 1}</span>
                               <p className="text-xs font-bold text-slate-100 truncate">{tx.title}</p>
                             </div>
-                            <p className="text-[11px] text-slate-400 mt-0.5">{tx.category} • {tx.paymentMethod}</p>
+                            <p className="text-[11px] text-slate-400 mt-0.5">{catObj.label} • {tx.paymentMethod}</p>
                           </div>
                         </div>
 
@@ -883,6 +949,27 @@
               <div className="space-y-5 animate-slide-up">
                 
                 <div className="space-y-2">
+                  <div className="grid grid-cols-2 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800">
+                    <button
+                      type="button"
+                      onClick={() => setAnalyticsType('expense')}
+                      className={`py-2 text-xs font-bold rounded-lg transition-all ${
+                        analyticsType === 'expense' ? 'bg-rose-500 text-white' : 'text-slate-400'
+                      }`}
+                    >
+                      Expense Analytics
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setAnalyticsType('income')}
+                      className={`py-2 text-xs font-bold rounded-lg transition-all ${
+                        analyticsType === 'income' ? 'bg-emerald-500 text-slate-950' : 'text-slate-400'
+                      }`}
+                    >
+                      Income Analytics
+                    </button>
+                  </div>
+
                   <div className="clay-card p-1.5 grid grid-cols-4 gap-1">
                     {['Weekly', 'Monthly', 'Yearly', 'Custom'].map((tf) => (
                       <button
@@ -929,8 +1016,12 @@
 
                 <div className="grid grid-cols-2 gap-3">
                   <div className="clay-card p-3.5 space-y-1">
-                    <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">Total Spent</p>
-                    <p className="text-base font-extrabold text-rose-400">{formatINR(analyticsKPIs.periodSpent)}</p>
+                    <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">
+                      Total {analyticsType === 'income' ? 'Income' : 'Spent'}
+                    </p>
+                    <p className={`text-base font-extrabold ${analyticsType === 'income' ? 'text-emerald-400' : 'text-rose-400'}`}>
+                      {formatINR(analyticsKPIs.periodTotal)}
+                    </p>
                     <p className="text-[10px] text-slate-500">{analyticsKPIs.txCount} transactions</p>
                   </div>
 
@@ -947,9 +1038,9 @@
                   </div>
 
                   <div className="clay-card p-3.5 space-y-1">
-                    <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">Highest Expense</p>
-                    <p className="text-sm font-bold text-blue-400 truncate">{formatINR(analyticsKPIs.highestExpense)}</p>
-                    <p className="text-[10px] text-slate-500 truncate">{analyticsKPIs.highestExpenseTitle}</p>
+                    <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">Highest Entry</p>
+                    <p className="text-sm font-bold text-blue-400 truncate">{formatINR(analyticsKPIs.highestAmount)}</p>
+                    <p className="text-[10px] text-slate-500 truncate">{analyticsKPIs.highestTitle}</p>
                   </div>
                 </div>
 
@@ -957,7 +1048,7 @@
                   <div className="flex justify-between items-center">
                     <h3 className="text-xs font-bold text-slate-300 uppercase tracking-wider inline-flex items-center gap-1.5">
                       <Icons.PieChart className="w-4 h-4 text-emerald-400" />
-                      Expense Breakdown
+                      {analyticsType === 'income' ? 'Income Category Share' : 'Expense Category Share'}
                     </h3>
                     <span className="text-[10px] text-slate-400 font-medium">{analyticsTimeframe}</span>
                   </div>
@@ -970,7 +1061,7 @@
                   <div className="flex justify-between items-center">
                     <h3 className="text-xs font-bold text-slate-300 uppercase tracking-wider inline-flex items-center gap-1.5">
                       <Icons.BarChart3 className="w-4 h-4 text-emerald-400" />
-                      Spending Trend
+                      {analyticsType === 'income' ? 'Income Flow Trend' : 'Spending Trend'}
                     </h3>
                     <span className="text-[10px] text-slate-400 font-medium">{analyticsTimeframe} Timeline</span>
                   </div>
@@ -992,14 +1083,14 @@
                 </div>
 
                 <div className="space-y-2.5">
-                  <h4 className="text-xs font-bold text-slate-400 px-1 uppercase tracking-wider">Detailed Category Share</h4>
-                  {CATEGORIES.map(cat => {
-                    const catSpent = analyticsFilteredTransactions
-                      .filter(t => t.type === 'expense' && t.category === cat.id)
+                  <h4 className="text-xs font-bold text-slate-400 px-1 uppercase tracking-wider">Detailed Category Breakdown</h4>
+                  {(analyticsType === 'income' ? INCOME_CATEGORIES : EXPENSE_CATEGORIES).map(cat => {
+                    const catTotal = analyticsFilteredTransactions
+                      .filter(t => t.type === analyticsType && t.category === cat.id)
                       .reduce((sum, t) => sum + Number(t.amount), 0);
                     
-                    if (catSpent === 0) return null;
-                    const percent = analyticsKPIs.periodSpent > 0 ? Math.round((catSpent / analyticsKPIs.periodSpent) * 100) : 0;
+                    if (catTotal === 0) return null;
+                    const percent = analyticsKPIs.periodTotal > 0 ? Math.round((catTotal / analyticsKPIs.periodTotal) * 100) : 0;
                     const IconComp = cat.icon;
 
                     return (
@@ -1012,7 +1103,7 @@
                             <span className="font-semibold text-slate-200">{cat.label}</span>
                           </div>
                           <div className="text-right">
-                            <span className="font-bold text-white">{formatINR(catSpent)}</span>
+                            <span className="font-bold text-white">{formatINR(catTotal)}</span>
                             <span className="text-[10px] text-slate-400 ml-1.5">({percent}%)</span>
                           </div>
                         </div>
@@ -1050,7 +1141,12 @@
                       className="bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-[11px] text-slate-300 focus:outline-none"
                     >
                       <option value="All">All Categories</option>
-                      {CATEGORIES.map(c => <option key={c.id} value={c.id}>{c.label}</option>)}
+                      <optgroup label="Expense Categories">
+                        {EXPENSE_CATEGORIES.map(c => <option key={`exp_${c.id}`} value={c.id}>{c.label}</option>)}
+                      </optgroup>
+                      <optgroup label="Income Categories">
+                        {INCOME_CATEGORIES.map(c => <option key={`inc_${c.id}`} value={c.id}>{c.label}</option>)}
+                      </optgroup>
                     </select>
 
                     <select
@@ -1072,7 +1168,7 @@
                     </div>
                   ) : (
                     filteredTransactions.map((tx) => {
-                      const catObj = CATEGORIES.find(c => c.id === tx.category) || CATEGORIES[6];
+                      const catObj = getCategoryInfo(tx.category, tx.type);
                       const IconComp = catObj.icon;
 
                       return (
@@ -1083,7 +1179,7 @@
                             </div>
                             <div className="min-w-0">
                               <p className="text-xs font-bold text-slate-100 truncate">{tx.title}</p>
-                              <p className="text-[11px] text-slate-400 mt-0.5">{tx.category} • {tx.paymentMethod}</p>
+                              <p className="text-[11px] text-slate-400 mt-0.5">{catObj.label} • {tx.paymentMethod}</p>
                               {tx.note && <p className="text-[10px] text-slate-500 truncate mt-0.5">{tx.note}</p>}
                             </div>
                           </div>
@@ -1153,7 +1249,7 @@
                 </div>
 
                 <div className="clay-card p-4 space-y-3">
-                  <h3 className="text-xs font-bold text-slate-200 uppercase tracking-wider">Monthly Budget Limit</h3>
+                  <h3 className="text-xs font-bold text-slate-200 uppercase tracking-wider">Monthly Expense Budget Limit</h3>
                   <div className="relative">
                     <span className="absolute left-3.5 top-2.5 text-xs text-slate-400 font-bold">₹</span>
                     <input 
@@ -1182,7 +1278,7 @@
               onClick={() => setActiveTab('home')}
               className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${activeTab === 'home' ? 'text-emerald-400 font-bold' : 'text-slate-400'}`}
             >
-              <Icons.Home className="w-5 h-5" />
+              <Icons.HomeNav className="w-5 h-5" />
               <span className="text-[10px]">Home</span>
             </button>
 
@@ -1227,7 +1323,7 @@
                   <div className="grid grid-cols-2 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800">
                     <button
                       type="button"
-                      onClick={() => setFormData(prev => ({ ...prev, type: 'expense' }))}
+                      onClick={() => handleTypeChange('expense')}
                       className={`py-2 text-xs font-bold rounded-lg transition-all ${
                         formData.type === 'expense' ? 'bg-rose-500 text-white' : 'text-slate-400'
                       }`}
@@ -1236,7 +1332,7 @@
                     </button>
                     <button
                       type="button"
-                      onClick={() => setFormData(prev => ({ ...prev, type: 'income' }))}
+                      onClick={() => handleTypeChange('income')}
                       className={`py-2 text-xs font-bold rounded-lg transition-all ${
                         formData.type === 'income' ? 'bg-emerald-500 text-slate-950' : 'text-slate-400'
                       }`}
@@ -1250,7 +1346,7 @@
                     <input 
                       type="text"
                       required
-                      placeholder="e.g. Swiggy, Fuel, Salary"
+                      placeholder="e.g. Swiggy, Fuel, Salary, Mutual Fund"
                       value={formData.title}
                       onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                       className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none"
@@ -1278,7 +1374,9 @@
                         onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                         className="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-2.5 text-xs text-white focus:outline-none"
                       >
-                        {CATEGORIES.map(c => <option key={c.id} value={c.id}>{c.label}</option>)}
+                        {(formData.type === 'income' ? INCOME_CATEGORIES : EXPENSE_CATEGORIES).map(c => (
+                          <option key={c.id} value={c.id}>{c.label}</option>
+                        ))}
                       </select>
                     </div>
 
